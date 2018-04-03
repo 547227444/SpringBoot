@@ -7,16 +7,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class FreemarkerController {
 	
-	@RequestMapping("/a")
+	@RequestMapping("/")
 	public String index(ModelMap map) {
-		System.err.println(">>>>>>>>>>>>>>>>>>>>>");
-		map.put("name", "隔壁老王");
+		System.err.println("Freemarker>>>>>>>index");
+		map.put("name", "老王");
 		return "index";
 	}
 	
 	
 	@RequestMapping("/center")
 	public String center() {
+		System.err.println("Freemarker>>>>>>>center");
 		return "center/center";
 	}
 	
