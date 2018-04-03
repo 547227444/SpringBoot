@@ -11,14 +11,13 @@ public class FreemarkerController {
 	public String index(ModelMap map) {
 		System.err.println(">>>>>>>>>>>>>>>>>>>>>");
 		map.put("name", "隔壁老王");
-		return "freemarker/index";
+		return "index";
 	}
 	
 	
-	@RequestMapping("center")
+	@RequestMapping("/center")
 	public String center() {
-		
-		return "freemarker/center/center";
+		return "center/center";
 	}
 	
 }

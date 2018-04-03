@@ -23,12 +23,12 @@ public class HelloController {
 	private Resource resource;
 	
 	
-	@RequestMapping(value="/hello")
+	@RequestMapping("/hello")
 	public String hello() {
 		return "hello springboot~~~~~~";
 	}
 	
-	@RequestMapping(value="/getUser")
+	@RequestMapping("/getUser")
 	public User getUser() {
 		User user = new User();
 		user.setAge(18);
@@ -37,8 +37,9 @@ public class HelloController {
 		return user;
 	}
 	
-	@RequestMapping(value="/getUserJson")
+	@RequestMapping("/getUserJson")
 	public LeeoJSONResult getUserJson() {
+		System.err.println(">>>>>>>>>>>>>>>>>>>>>");
 		User user = new User();
 		user.setAge(18);
 		user.setName("小黄");
@@ -49,7 +50,7 @@ public class HelloController {
 		return LeeoJSONResult.ok(user);
 	}
 	
-	@RequestMapping(value="/hot")
+	@RequestMapping("/hot")
 	public String hot() {
 		return "hot~~~~~~~";
 	}
@@ -59,7 +60,7 @@ public class HelloController {
 //		return http;
 //	}
 	
-	@RequestMapping(value="/getResource")
+	@RequestMapping("/getResource")
 	public LeeoJSONResult getResource() {
 		
 		Resource bean =new Resource();
