@@ -10,7 +10,7 @@ public class FreemarkerController {
 	@RequestMapping("/")
 	public String index(ModelMap map) {
 		System.err.println("Freemarker>>>>>>>index");
-		map.put("name", "老王");
+		map.put("name", "2222");
 		return "index";
 	}
 	
